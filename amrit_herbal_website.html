@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amrit Herbal Products</title>
+  <style>
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin:0; padding:0; background:#fdf6e3; color:#064e3b; }
+    header { background:linear-gradient(90deg,#064e3b,#0f766e); color:#fdf6e3; padding:30px 0; text-align:center; }
+    header h1 { margin:0; font-size:2.5em; font-weight:bold; }
+    nav { margin-top:15px; }
+    nav a { color:#fdf6e3; margin:0 15px; text-decoration:none; font-weight:600; font-size:1.1em; }
+    section { padding:50px 20px; max-width:1200px; margin:0 auto; }
+    .products { display:flex; flex-wrap:wrap; gap:30px; justify-content:center; }
+    .product { background:#fffbe6; border-radius:16px; padding:25px; width:320px; text-align:center; box-shadow:0 6px 20px rgba(0,0,0,0.12); transition:transform 0.3s; }
+    .product:hover { transform:translateY(-5px); }
+    .product img { width:100%; border-radius:16px; margin-bottom:15px; }
+    .product h3 { margin:10px 0 8px 0; font-size:1.4em; }
+    .product p { margin:0 0 10px 0; line-height:1.5; }
+    .btn-whatsapp { display:inline-block; padding:12px 25px; background:#0f766e; color:#fdf6e3; border-radius:10px; text-decoration:none; font-weight:700; margin-top:10px; transition:background 0.3s; }
+    .btn-whatsapp:hover { background:#064e3b; }
+    footer { text-align:center; padding:25px 0; color:#064e3b; background:#fffbe6; margin-top:50px; }
+    .back-label, .label-prompts { background:#fffbe6; border-radius:12px; padding:20px; box-shadow:0 4px 15px rgba(0,0,0,0.1); margin-top:20px; text-align:left; }
+    .back-label h4, .label-prompts h4 { color:#064e3b; margin-bottom:12px; }
+    .icon-row { display:flex; gap:12px; margin-top:12px; justify-content:center; }
+    .icon { width:40px; height:40px; background:#d1fae5; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:18px; }
+    input[type='file'], input[type='text'], textarea { width:100%; padding:10px; margin:5px 0 10px 0; border-radius:8px; border:1px solid #e2e8f0; }
+    button { padding:10px 20px; border-radius:8px; border:0; background:#064e3b; color:#fdf6e3; font-weight:700; cursor:pointer; }
+    button:hover { background:#0f766e; }
+    .editable { border:1px dashed #064e3b; padding:5px; border-radius:6px; }
+    @media(max-width:768px){ .products { flex-direction:column; align-items:center; } }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1 contenteditable="true">Amrit Herbal Products</h1>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#products">Products</a>
+    <a href="#order">Order</a>
+  </nav>
+</header>
+
+<section id="about">
+  <h2 contenteditable="true">About Our Brand</h2>
+  <p contenteditable="true">Amrit Sutra is committed to bringing authentic Ayurvedic herbal products that support natural fat loss and overall wellness. Our formulations, including the TrimFit Powder and TrimFit Oil, are crafted using traditional herbs like Triphala, Trikatu, Fenugreek, and Turmeric, combined with modern quality standards. Manufactured & Marketed by Amrit Sutra, 77 Dumra, Bhicholi, U.P., we ensure 100% natural, eco-friendly, and chemical-free products. Customer Care: 9478878887 | dummy@gmail.com | FSSAI Lic. No: 12345678901234</p>
+</section>
+
+<section id="products">
+  <h2 contenteditable="true">Our Products</h2>
+  <div class="products">
+    <div class="product" contenteditable="true">
+      <input type="file" accept="image/*" onchange="previewImage(event, 'powder-front')">
+      <img id="powder-front" src="https://via.placeholder.com/320x180?text=TrimFit+Powder+Front" alt="Amrit Sutra TrimFit Powder Front Label">
+      <h3>Amrit Sutra TrimFit Powder</h3>
+      <p>Natural Ayurvedic support for fat loss & digestion.</p>
+      <a class="btn-whatsapp" href="https://wa.me/918889818849?text=I%20want%20to%20order%20Amrit%20Sutra%20TrimFit%20Powder">Order on WhatsApp</a>
+      <div class="back-label">
+        <h4>Back Label Details:</h4>
+        <p><strong>Ingredients:</strong> Triphala (Amla, Baheda, Harade), Trikatu (Black Pepper, Dry Ginger, Pippali), Fenugreek, Flaxseed, Ajwain, Jeera, Turmeric, Cinnamon, Fennel.</p>
+        <p><strong>Suggested Use:</strong> Mix 1 tsp with warm water twice daily.</p>
+        <p><strong>Storage:</strong> Store in a cool, dry place.</p>
+        <p>MFG DATE: 05/10/2025 | BATCH NO: 3102025 | BEST BEFORE: 12 MONTHS | NET WT: 100 g | MRP ₹500/-</p>
+        <div class="icon-row">
+          <div class="icon" title="Eco-Friendly">🌱</div>
+          <div class="icon" title="No Chemicals">❌</div>
+          <div class="icon" title="100% Natural">🍃</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product" contenteditable="true">
+      <input type="file" accept="image/*" onchange="previewImage(event, 'oil-front')">
+      <img id="oil-front" src="https://via.placeholder.com/320x180?text=TrimFit+Oil+Front" alt="Amrit Sutra TrimFit Oil Front Label">
+      <h3>Amrit Sutra TrimFit Oil</h3>
+      <p>Herbal massage oil for fat burning & inch loss support.</p>
+      <a class="btn-whatsapp" href="https://wa.me/918889818849?text=I%20want%20to%20order%20Amrit%20Sutra%20TrimFit%20Oil">Order on WhatsApp</a>
+      <div class="back-label">
+        <h4>Back Label Details:</h4>
+        <p><strong>Ingredients:</strong> Mustard Oil 45 ml, Sesame Oil 45 ml, Castor Oil 5 ml, Garlic 2 g, Dry Ginger Powder 1 g, Ajwain 1 g, Turmeric 0.5 g, Camphor 0.5–1 g (after cooling).</p>
+        <p><strong>Directions:</strong> Massage gently on belly, thighs, or arms 10–15 mins daily before bath.</p>
+        <p><strong>Storage:</strong> Keep away from direct sunlight.</p>
+        <p><strong>Warning:</strong> For External Use Only. Not for medicinal use.</p>
+        <div class="icon-row">
+          <div class="icon" title="Massage">💆</div>
+          <div class="icon" title="Eco-Friendly">🌱</div>
+          <div class="icon" title="Herbal">🍃</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="order">
+  <h2 contenteditable="true">Place Your Order</h2>
+  <p contenteditable="true">Click the WhatsApp button below to send us your order directly:</p>
+  <a class="btn-whatsapp" href="https://wa.me/918889818849?text=I%20want%20to%20place%20an%20order%20from%20Amrit%20Herbal%20Products">Order on WhatsApp</a>
+</section>
+
+<footer contenteditable="true">
+  &copy; 2025 Amrit Herbal Products | Based in Indore | Pan India Delivery
+</footer>
+
+<script>
+function previewImage(event, id) {
+  const reader = new FileReader();
+  reader.onload = function(){
+    const output = document.getElementById(id);
+    output.src = reader.result;
+  };
+  reader.readAsDataURL(event.target.files[0]);
+}
+</script>
+
+</body>
+</html>
